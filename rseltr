@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#you Ruby environment here
+source "$HOME/.rvm/scripts/rvm"
+query=$(xsel -o)
+translation=`ruby $PATH_TO_SCRIPT/get_google_translation.rb "$query"`
+
+notify-send "$query" "$translation"
